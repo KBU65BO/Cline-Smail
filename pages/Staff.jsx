@@ -8,9 +8,10 @@ import sGui from '../assets/img/staff-gui.png'
 import sNumaoi from '../assets/img/staff-numaoi.png'
 import sAnn from '../assets/img/staff-ann.png'
 import sChai from '../assets/img/staff-chai.png'
+import sArisza from '../assets/img/staff-arisza.png'
 
 const team = [
-  { img:sCherry, name:'Dr. Patcharin Nanthaekaphong (Dr. Cherry)', role:'Prosthodontist & Implant Dentist', bullets:[
+  { img:sArisza, name:'Dr. Patcharin Nanthaekaphong (Dr. Cherry)', role:'Prosthodontist & Implant Dentist', bullets:[
     'DDS (Hons), Mahidol University', 'M.Sc. Prosthodontics, Mahidol University', 'Certificates in Surgical & Prosthetic Implant Dentistry'
   ]},
   { img:sTob, name:'Dr. Pabhinvitch Vipatbovonwong (Dr. Tob)', role:'Orthodontist', bullets:[
@@ -36,6 +37,9 @@ const team = [
   ]},
   { img:sChai, name:'Dr. Chatchai Tharanont (Dr. Chai)', role:'General Dentistry', bullets:[
     'DDS, Mahidol University'
+  ]},
+  { img:sCherry, name:'Dr. Arisza', role:'Orthodontist', bullets:[
+    'DDS, Khon Kaen University', 'M.Sc. Orthodontics, Khon Kaen University'
   ]},
 ]
 
