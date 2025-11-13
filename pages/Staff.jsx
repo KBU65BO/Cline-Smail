@@ -54,7 +54,9 @@ export default function Staff(){
           {team.map((m,i)=>(
             <article key={i} className="profile">
               <Reveal delay={(i%3)+1}>
-                <img src={m.img} alt={m.name} />
+                <div className="profile-media">
+                  <img src={m.img} alt={m.name} />
+                </div>
                 <h3>{m.name}</h3>
                 <p className="muted">{m.role}</p>
                 <ul className="bullets">

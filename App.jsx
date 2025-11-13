@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import ContactWidget from './components/ContactWidget.jsx'
 import Home from './pages/Home.jsx'
 import Service from './pages/Service.jsx'
 import Staff from './pages/Staff.jsx'
@@ -42,6 +43,7 @@ export default function App(){
         </Routes>
       </main>
       <Footer />
+      <ContactWidget />
     </div>
   )
 }
