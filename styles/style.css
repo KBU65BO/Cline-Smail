@@ -80,9 +80,11 @@ ul.bullets{padding-left:1.2rem}
 .card:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(2,132,199,.12)}
 .figure-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow);text-align:center}
 .figure-card figcaption{margin-top:8px;color:var(--muted);font-size:.95rem}
-.tile{display:grid;grid-template-columns:120px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);padding:12px;border-radius:var(--radius);align-items:center;box-shadow:var(--shadow);transition:transform .18s var(--easing), box-shadow .18s var(--easing)}
+.tile{display:grid;grid-template-columns:120px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);padding:12px;border-radius:var(--radius);align-items:center;box-shadow:var(--shadow);transition:transform .18s var(--easing), box-shadow .18s var(--easing);text-decoration:none;color:inherit;cursor:pointer}
 .tile:hover{transform:translateY(-2px)}
+.tile:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .tile img{aspect-ratio: 4 / 3;object-fit:cover}
+.tile-cta{color:var(--accent);font-weight:600}
 
 .page-hero.small{padding:28px 0 12px;border-bottom:1px solid var(--line);background:linear-gradient(0deg,#fff,#f7fbff)}
 .table-wrap{overflow:auto}

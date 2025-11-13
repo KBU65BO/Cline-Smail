@@ -71,28 +71,28 @@ export default function Home(){
         <div className="container">
           <Reveal><h2>Our service areas</h2></Reveal>
           <div className="grid three">
-            <Reveal delay={1} className="tile">
+            <Reveal as={Link} to="/service#general" delay={1} className="tile">
               <img src={svcGeneral} alt="General dentistry" />
               <div>
                 <h3>General Dentistry</h3>
                 <p>Check-up, cleaning &amp; polishing, fillings, fluoride and preventive care.</p>
-                <a href="#/service#general">Explore</a>
+                <span className="tile-cta">Explore</span>
               </div>
             </Reveal>
-            <Reveal delay={2} className="tile">
+            <Reveal as={Link} to="/service#cosmetic" delay={2} className="tile">
               <img src={svcCosmetic} alt="Cosmetic and restoration" />
               <div>
                 <h3>Cosmetic &amp; Restoration</h3>
                 <p>Crowns, bridges, veneers and smile makeovers to enhance function &amp; aesthetics.</p>
-                <a href="#/service#cosmetic">Explore</a>
+                <span className="tile-cta">Explore</span>
               </div>
             </Reveal>
-            <Reveal delay={3} className="tile">
+            <Reveal as={Link} to="/service#implant" delay={3} className="tile">
               <img src={svcImplant} alt="Dental implant" />
               <div>
                 <h3>Dental Implants</h3>
                 <p>Single tooth to full-arch options including All‑on‑4 concepts.</p>
-                <a href="#/service#implant">Explore</a>
+                <span className="tile-cta">Explore</span>
               </div>
             </Reveal>
           </div>
@@ -111,3 +111,5 @@ export default function Home(){
     </>
   )
 }
+
+
