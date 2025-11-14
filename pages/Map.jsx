@@ -15,13 +15,13 @@ export default function MapPage(){
         <Reveal className="map-wrap card">
           <iframe title="Dental Smile Pattaya Map" width="100%" height="440" loading="lazy" style={{border:0}}
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=12.924242,100.882485&z=16&output=embed"></iframe>
+            src="https://www.google.com/maps?q=12.9220523,100.882001&z=16&output=embed"></iframe>
         </Reveal>
 
         <div className="grid two landmarks">
           <Reveal delay={1} className="card">
             <h3>Coordinates</h3>
-            <p><strong>Lat/Lng:</strong> 12.924242, 100.882485</p>
+            <p><strong>Lat/Lng:</strong> 12.9220523, 100.882001</p>
             <img src={imgMap} alt="Map marker" />
           </Reveal>
           <Reveal delay={2} className="card">
