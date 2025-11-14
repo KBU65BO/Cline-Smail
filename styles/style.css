@@ -86,6 +86,12 @@ ul.bullets{padding-left:1.2rem}
 .tile img{aspect-ratio: 4 / 3;object-fit:cover}
 .tile-cta{color:var(--accent);font-weight:600}
 
+/* Banner frame between hero and content */
+.hero-banner{padding:18px 0}
+.hero-banner-inner{display:flex;justify-content:center}
+.hero-banner-inner img{width:100%;max-width:1400px;height:360px;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:0 26px 60px rgba(2,132,199,.10);background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.2))}
+
+
 .page-hero.small{padding:28px 0 12px;border-bottom:1px solid var(--line);background:linear-gradient(0deg,#fff,#f7fbff)}
 .table-wrap{overflow:auto}
 table{width:100%;border-collapse:collapse;border:1px solid var(--line);background:#fff;border-radius:12px;overflow:hidden}
@@ -147,6 +153,7 @@ th{background:#f1f5f9;font-weight:600}
 
 @media (max-width: 900px){
   .hero-inner{grid-template-columns:1fr}
+  .hero-banner-inner img{height:220px}
   .grid.two{grid-template-columns:1fr}
   .grid.three{grid-template-columns:1fr}
   .contact-layout{grid-template-columns:1fr}
@@ -155,4 +162,8 @@ th{background:#f1f5f9;font-weight:600}
   .site-nav ul{flex-direction:column}
   .nav-toggle{display:block}
   .contact-widget{display:none}
+}
+
+@media (min-width: 1200px){
+  .hero-banner-inner img{height:420px}
 }

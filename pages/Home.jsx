@@ -29,6 +29,14 @@ export default function Home(){
         </div>
       </section>
 
+      <section className="hero-banner">
+        <div className="container">
+          <div className="hero-banner-inner">
+            <img src="/clinic.jpg" alt="Dental consultation" />
+          </div>
+        </div>
+      </section>
+
       <section className="why">
         <div className="container">
           <Reveal><h2>Why choose us</h2></Reveal>
