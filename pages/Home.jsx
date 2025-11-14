@@ -8,12 +8,6 @@ import svcImplant from '../assets/img/service-implant.png'
 export default function Home(){
   return (
     <>
-      <section className="announcement">
-        <div className="container">
-          <Reveal><strong>We’ve moved!</strong> New office since April 2025. See the <Link to="/map">map</Link> and directions.</Reveal>
-        </div>
-      </section>
-
       <section className="hero">
         <div className="container hero-inner">
           <Reveal delay={1} className="hero-copy">
