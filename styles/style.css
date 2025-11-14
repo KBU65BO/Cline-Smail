@@ -142,8 +142,16 @@ th{background:#f1f5f9;font-weight:600}
 
 /* Testimonial slider */
 .slider{position:relative}
-.slide{opacity:0;transform:translateY(6px);position:absolute;inset:0;transition:opacity .45s var(--easing), transform .45s var(--easing)}
+.slide{opacity:0;transform:translateY(6px);position:absolute;inset:0;transition:opacity .45s var(--easing), transform .45s var(--easing);display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px}
 .slide.active{opacity:1;transform:none;position:relative}
+
+/* Make before/after images smaller and side-by-side on wide screens */
+.slider .slide img{max-width:48%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow);display:inline-block}
+.slider .slide p.muted{margin:6px 0 0;font-size:.9rem}
+
+@media (max-width:900px){
+  .slider .slide img{max-width:100%;display:block}
+}
 
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce){
