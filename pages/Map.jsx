@@ -1,7 +1,9 @@
 import Reveal from '../components/Reveal.jsx'
 import imgMap from '../assets/img/map.png'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 
 export default function MapPage(){
+  const { openLightbox } = useLightbox()
   return (
     <>
       <section className="page-hero small">
@@ -20,9 +22,9 @@ export default function MapPage(){
 
         <div className="grid two landmarks">
           <Reveal delay={1} className="card">
-            <h3>Coordinates</h3>
-            <p><strong>Lat/Lng:</strong> 12.9220523, 100.882001</p>
-            <img src={imgMap} alt="Map marker" />
+              <h3>Coordinates</h3>
+              <p><strong>Lat/Lng:</strong> 12.9220523, 100.882001</p>
+              <img src={imgMap} alt="Map marker" onClick={() => openLightbox(imgMap, 'Map marker')} style={{cursor:'pointer'}} />
           </Reveal>
           <Reveal delay={2} className="card">
             <h3>Nearby landmarks</h3>

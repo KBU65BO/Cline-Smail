@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal.jsx'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 import sCherry from '../assets/img/staff-cherry.png'
 import sTob from '../assets/img/staff-tob.png'
 import sAe from '../assets/img/staff-ae.png'
@@ -44,6 +45,7 @@ const team = [
 ]
 
 export default function Staff(){
+  const { openLightbox } = useLightbox()
   return (
     <>
       <section className="page-hero small">
@@ -59,7 +61,7 @@ export default function Staff(){
             <article key={i} className="profile">
               <Reveal delay={(i%3)+1}>
                 <div className="profile-media">
-                  <img src={m.img} alt={m.name} />
+                  <img src={m.img} alt={m.name} onClick={() => openLightbox(m.img, m.name)} style={{cursor:'pointer'}} />
                 </div>
                 <h3>{m.name}</h3>
                 <p className="muted">{m.role}</p>

@@ -1,5 +1,6 @@
 import Reveal from '../components/Reveal.jsx'
 import CaseSlider from '../components/CaseSlider.jsx'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 import case1b from '../assets/img/case1-before.png'
 import case1a from '../assets/img/case1-after.png'
 import case2b from '../assets/img/case2-before.png'
@@ -14,6 +15,8 @@ const items = [
 ]
 
 export default function Testimonial(){
+  const { openLightbox } = useLightbox()
+
   return (
     <>
       <section className="page-hero small">
@@ -25,7 +28,7 @@ export default function Testimonial(){
 
       <section className="container">
         <Reveal>
-          <CaseSlider items={items} interval={5000} />
+          <CaseSlider items={items} interval={5000} onImageClick={openLightbox} />
         </Reveal>
         <Reveal>
           <div className="gallery-note">

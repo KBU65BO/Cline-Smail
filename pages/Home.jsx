@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 import Reveal from '../components/Reveal.jsx'
 import heroImg from '../assets/img/hero.png'
 import svcGeneral from '../assets/img/service-general.png'
@@ -12,6 +14,7 @@ import imgCT from '../assets/img/ct.png'
 import imgLab from '../assets/img/lab.png'
 
 export default function Home(){
+  const { openLightbox } = useLightbox()
   return (
     <>
       <section className="hero">
@@ -30,15 +33,15 @@ export default function Home(){
             </ul>
           </Reveal>
           <Reveal delay={2} className="hero-media">
-            <img src={heroImg} alt="Dental Smile Pattaya" />
+            <img src={heroImg} alt="Dental Smile Pattaya" onClick={() => openLightbox(heroImg, 'Dental Smile Pattaya')} />
           </Reveal>
         </div>
       </section>
 
       <section className="hero-banner">
         <div className="container">
-          <div className="hero-banner-inner">
-            <img src="/clinic.jpg" alt="Dental consultation" />
+            <div className="hero-banner-inner">
+            <img src="/clinic.jpg" alt="Dental consultation" onClick={() => openLightbox('/clinic.jpg', 'Dental consultation')} />
           </div>
         </div>
       </section>
@@ -48,7 +51,7 @@ export default function Home(){
           <Reveal><h2>Our service areas</h2></Reveal>
           <div className="grid three">
             <Reveal as={Link} to="/service#general" delay={1} className="tile">
-              <img src={svcGeneral} alt="General dentistry" />
+              <img src={svcGeneral} alt="General dentistry" onClick={() => openLightbox(svcGeneral, 'General Dentistry')} />
               <div>
                 <h3>General Dentistry</h3>
                 <p>Check-up, cleaning &amp; polishing, fillings, fluoride and preventive care.</p>
@@ -56,7 +59,7 @@ export default function Home(){
               </div>
             </Reveal>
             <Reveal as={Link} to="/service#cosmetic" delay={2} className="tile">
-              <img src={svcCosmetic} alt="Cosmetic and restoration" />
+              <img src={svcCosmetic} alt="Cosmetic and restoration" onClick={() => openLightbox(svcCosmetic, 'Cosmetic & Restoration')} />
               <div>
                 <h3>Cosmetic &amp; Restoration</h3>
                 <p>Crowns, bridges, veneers and smile makeovers to enhance function &amp; aesthetics.</p>
@@ -64,7 +67,7 @@ export default function Home(){
               </div>
             </Reveal>
             <Reveal as={Link} to="/service#implant" delay={3} className="tile">
-              <img src={svcImplant} alt="Dental implant" />
+              <img src={svcImplant} alt="Dental implant" onClick={() => openLightbox(svcImplant, 'Dental Implants')} />
               <div>
                 <h3>Dental Implants</h3>
                 <p>Single tooth to full-arch options including All‑on‑4 concepts.</p>
@@ -112,32 +115,34 @@ export default function Home(){
           <Reveal><h2>Our Facilities</h2></Reveal>
           <div className="grid three facility-grid">
             <Reveal delay={1} as="figure" className="figure-card">
-              <img src={imgReception} alt="Reception & Waiting Area" />
+              <img src={imgReception} alt="Reception & Waiting Area" onClick={() => openLightbox(imgReception, 'Reception & Waiting Area')} />
               <figcaption>Reception &amp; Waiting Area</figcaption>
             </Reveal>
             <Reveal delay={2} as="figure" className="figure-card">
-              <img src={imgSteril} alt="Sterilization Room" />
+              <img src={imgSteril} alt="Sterilization Room" onClick={() => openLightbox(imgSteril, 'Sterilization Room')} />
               <figcaption>Sterilization Room</figcaption>
             </Reveal>
             <Reveal delay={3} as="figure" className="figure-card">
-              <img src={imgTreatment} alt="Treatment Room" />
+              <img src={imgTreatment} alt="Treatment Room" onClick={() => openLightbox(imgTreatment, 'Treatment Room')} />
               <figcaption>Treatment Room</figcaption>
             </Reveal>
             <Reveal delay={1} as="figure" className="figure-card">
-              <img src={imgXray} alt="Digital X-ray" />
+              <img src={imgXray} alt="Digital X-ray" onClick={() => openLightbox(imgXray, 'Digital X-ray')} />
               <figcaption>Digital X-ray</figcaption>
             </Reveal>
             <Reveal delay={2} as="figure" className="figure-card">
-              <img src={imgCT} alt="3D CT Imaging" />
+              <img src={imgCT} alt="3D CT Imaging" onClick={() => openLightbox(imgCT, '3D CT Imaging')} />
               <figcaption>3D CT Imaging</figcaption>
             </Reveal>
             <Reveal delay={3} as="figure" className="figure-card">
-              <img src={imgLab} alt="Prosthetics Lab" />
+              <img src={imgLab} alt="Prosthetics Lab" onClick={() => openLightbox(imgLab, 'Prosthetics Lab')} />
               <figcaption>Prosthetics Lab</figcaption>
             </Reveal>
           </div>
         </div>
       </section>
+
+      {/* lightbox is provided globally by LightboxProvider */}
 
       <section className="cta">
         <div className="container cta-inner">

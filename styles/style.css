@@ -163,6 +163,16 @@ th{background:#f1f5f9;font-weight:600}
   .facility-grid .figure-card img{height:120px}
 }
 
+/* Lightbox overlay for viewing images */
+.lightbox{position:fixed;inset:0;background:rgba(2,6,23,.7);display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px;z-index:2200}
+.lightbox img{max-width:94%;max-height:84vh;border-radius:12px;box-shadow:0 30px 80px rgba(2,132,199,.28);border:1px solid rgba(255,255,255,.06)}
+.lightbox-close{position:absolute;top:18px;right:20px;background:rgba(255,255,255,.9);border:0;padding:6px 10px;border-radius:8px;font-size:22px;cursor:pointer;box-shadow:var(--shadow)}
+.lightbox-caption{color:#fff;margin-top:12px;font-size:1rem}
+.facility-grid .figure-card img{cursor:pointer}
+
+/* Make other images clickable cursor */
+.hero-media img,.hero-banner-inner img,.tile img{cursor:pointer}
+
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce){
   .hero::before,.hero-media,.btn.pulse::after{animation:none}

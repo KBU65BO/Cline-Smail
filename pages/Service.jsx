@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal.jsx'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 import imgGeneral from '../assets/img/service-general.png'
 import imgCosmetic from '../assets/img/service-cosmetic.png'
 import imgImplant from '../assets/img/service-implant.png'
@@ -19,6 +20,8 @@ function PriceTable({ rows }){
 }
 
 export default function Service(){
+  const { openLightbox } = useLightbox()
+
   return (
     <>
       <section className="page-hero small">
@@ -32,7 +35,7 @@ export default function Service(){
         <Reveal><h2>General Dentistry</h2></Reveal>
         <div className="grid two">
           <Reveal delay={1}>
-            <img src={imgGeneral} alt="General dentistry" />
+            <img src={imgGeneral} alt="General dentistry" onClick={() => openLightbox(imgGeneral, 'General dentistry')} />
             <ul className="check">
               <li>Cleaning &amp; polishing (recommend annually)</li>
               <li>Dental fillings (amalgam/composite)</li>
@@ -57,7 +60,7 @@ export default function Service(){
         <Reveal><h2>Cosmetic &amp; Restoration</h2></Reveal>
         <div className="grid two">
           <Reveal delay={1}>
-            <img src={imgCosmetic} alt="Cosmetic & Restoration" />
+            <img src={imgCosmetic} alt="Cosmetic & Restoration" onClick={() => openLightbox(imgCosmetic, 'Cosmetic & Restoration')} />
             <ul className="check">
               <li>Teeth whitening (LED/Laser/Zoom2/In‑office &amp; At‑home)</li>
               <li>Crowns &amp; Bridges (ceramic, zirconia, metal-ceramic)</li>
@@ -87,7 +90,7 @@ export default function Service(){
         <Reveal><h2>Dental Implants &amp; Orthodontics</h2></Reveal>
         <div className="grid two">
           <Reveal delay={1}>
-            <img src={imgImplant} alt="Implants" />
+            <img src={imgImplant} alt="Implants" onClick={() => openLightbox(imgImplant, 'Implants')} />
             <ul className="check">
               <li>Single implants with crown</li>
               <li>All‑on‑4 concept (full‑arch, immediate loading)</li>

@@ -1,7 +1,9 @@
 import Reveal from '../components/Reveal.jsx'
 import imgContact from '../assets/img/contact-illustration.png'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 
 export default function Contact(){
+  const { openLightbox } = useLightbox()
   const submit = (e) => {
     e.preventDefault()
     alert('Demo form. Replace with your backend or form provider.')
@@ -100,7 +102,7 @@ export default function Contact(){
         </form>
 
         <aside className="card contact-card">
-          <img src={imgContact} alt="Contact illustration" />
+          <img src={imgContact} alt="Contact illustration" onClick={() => openLightbox(imgContact, 'Contact illustration')} style={{cursor:'pointer'}} />
           <h3>Clinic</h3>
           <p>313/5 Pattaya 3rd. Road (near corner South Pattaya Road)<br/>Banglamung, Chonburi 20150</p>
           <ul className="contact-list">

@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal.jsx'
+import { useLightbox } from '../components/LightboxProvider.jsx'
 import imgReception from '../assets/img/reception.png'
 import imgSteril from '../assets/img/sterilization.png'
 import imgTreatment from '../assets/img/treatment.png'
@@ -7,6 +8,8 @@ import imgCT from '../assets/img/ct.png'
 import imgLab from '../assets/img/lab.png'
 
 export default function Facility(){
+  const { openLightbox } = useLightbox()
+
   return (
     <>
       <section className="page-hero small">
@@ -19,27 +22,27 @@ export default function Facility(){
       <section className="container">
         <div className="grid three">
           <Reveal delay={1} as="figure" className="figure-card">
-            <img src={imgReception} alt="Reception & Waiting Area" />
+            <img src={imgReception} alt="Reception & Waiting Area" onClick={() => openLightbox(imgReception, 'Reception & Waiting Area')} />
             <figcaption>Reception &amp; Waiting Area</figcaption>
           </Reveal>
           <Reveal delay={2} as="figure" className="figure-card">
-            <img src={imgSteril} alt="Sterilization Room" />
+            <img src={imgSteril} alt="Sterilization Room" onClick={() => openLightbox(imgSteril, 'Sterilization Room')} />
             <figcaption>Dental Equipment Sterilization Room</figcaption>
           </Reveal>
           <Reveal delay={3} as="figure" className="figure-card">
-            <img src={imgTreatment} alt="Treatment Room" />
+            <img src={imgTreatment} alt="Treatment Room" onClick={() => openLightbox(imgTreatment, 'Treatment Room')} />
             <figcaption>Treatment Rooms with modern dental chairs</figcaption>
           </Reveal>
           <Reveal delay={1} as="figure" className="figure-card">
-            <img src={imgXray} alt="Digital X-ray" />
+            <img src={imgXray} alt="Digital X-ray" onClick={() => openLightbox(imgXray, 'Digital X-ray')} />
             <figcaption>Digital X-ray</figcaption>
           </Reveal>
           <Reveal delay={2} as="figure" className="figure-card">
-            <img src={imgCT} alt="3D CT Imaging" />
+            <img src={imgCT} alt="3D CT Imaging" onClick={() => openLightbox(imgCT, '3D CT Imaging')} />
             <figcaption>3D CT Imaging</figcaption>
           </Reveal>
           <Reveal delay={3} as="figure" className="figure-card">
-            <img src={imgLab} alt="Prosthetics Lab" />
+            <img src={imgLab} alt="Prosthetics Lab" onClick={() => openLightbox(imgLab, 'Prosthetics Lab')} />
             <figcaption>Prosthetics Lab</figcaption>
           </Reveal>
         </div>

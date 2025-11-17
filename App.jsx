@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import ContactWidget from './components/ContactWidget.jsx'
+import LightboxProvider from './components/LightboxProvider.jsx'
 import Home from './pages/Home.jsx'
 import Service from './pages/Service.jsx'
 import Staff from './pages/Staff.jsx'
@@ -32,15 +33,17 @@ export default function App(){
       <Header />
       <main>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/staff" element={<Staff />} />
-          <Route path="/facility" element={<Facility />} />
-          <Route path="/testimonial" element={<Testimonial />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/map" element={<MapPage />} />
-        </Routes>
+        <LightboxProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/staff" element={<Staff />} />
+            <Route path="/facility" element={<Facility />} />
+            <Route path="/testimonial" element={<Testimonial />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/map" element={<MapPage />} />
+          </Routes>
+        </LightboxProvider>
       </main>
       <Footer />
       <ContactWidget />
