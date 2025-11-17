@@ -4,6 +4,12 @@ import heroImg from '../assets/img/hero.png'
 import svcGeneral from '../assets/img/service-general.png'
 import svcCosmetic from '../assets/img/service-cosmetic.png'
 import svcImplant from '../assets/img/service-implant.png'
+import imgReception from '../assets/img/reception.png'
+import imgSteril from '../assets/img/sterilization.png'
+import imgTreatment from '../assets/img/treatment.png'
+import imgXray from '../assets/img/xray.png'
+import imgCT from '../assets/img/ct.png'
+import imgLab from '../assets/img/lab.png'
 
 export default function Home(){
   return (
@@ -33,6 +39,38 @@ export default function Home(){
         <div className="container">
           <div className="hero-banner-inner">
             <img src="/clinic.jpg" alt="Dental consultation" />
+          </div>
+        </div>
+      </section>
+
+      <section className="focus">
+        <div className="container">
+          <Reveal><h2>Our service areas</h2></Reveal>
+          <div className="grid three">
+            <Reveal as={Link} to="/service#general" delay={1} className="tile">
+              <img src={svcGeneral} alt="General dentistry" />
+              <div>
+                <h3>General Dentistry</h3>
+                <p>Check-up, cleaning &amp; polishing, fillings, fluoride and preventive care.</p>
+                <span className="tile-cta">Explore</span>
+              </div>
+            </Reveal>
+            <Reveal as={Link} to="/service#cosmetic" delay={2} className="tile">
+              <img src={svcCosmetic} alt="Cosmetic and restoration" />
+              <div>
+                <h3>Cosmetic &amp; Restoration</h3>
+                <p>Crowns, bridges, veneers and smile makeovers to enhance function &amp; aesthetics.</p>
+                <span className="tile-cta">Explore</span>
+              </div>
+            </Reveal>
+            <Reveal as={Link} to="/service#implant" delay={3} className="tile">
+              <img src={svcImplant} alt="Dental implant" />
+              <div>
+                <h3>Dental Implants</h3>
+                <p>Single tooth to full-arch options including All‑on‑4 concepts.</p>
+                <span className="tile-cta">Explore</span>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -69,33 +107,33 @@ export default function Home(){
         </div>
       </section>
 
-      <section className="focus">
+      <section className="facility-gallery">
         <div className="container">
-          <Reveal><h2>Our service areas</h2></Reveal>
-          <div className="grid three">
-            <Reveal as={Link} to="/service#general" delay={1} className="tile">
-              <img src={svcGeneral} alt="General dentistry" />
-              <div>
-                <h3>General Dentistry</h3>
-                <p>Check-up, cleaning &amp; polishing, fillings, fluoride and preventive care.</p>
-                <span className="tile-cta">Explore</span>
-              </div>
+          <Reveal><h2>Our Facilities</h2></Reveal>
+          <div className="grid three facility-grid">
+            <Reveal delay={1} as="figure" className="figure-card">
+              <img src={imgReception} alt="Reception & Waiting Area" />
+              <figcaption>Reception &amp; Waiting Area</figcaption>
             </Reveal>
-            <Reveal as={Link} to="/service#cosmetic" delay={2} className="tile">
-              <img src={svcCosmetic} alt="Cosmetic and restoration" />
-              <div>
-                <h3>Cosmetic &amp; Restoration</h3>
-                <p>Crowns, bridges, veneers and smile makeovers to enhance function &amp; aesthetics.</p>
-                <span className="tile-cta">Explore</span>
-              </div>
+            <Reveal delay={2} as="figure" className="figure-card">
+              <img src={imgSteril} alt="Sterilization Room" />
+              <figcaption>Sterilization Room</figcaption>
             </Reveal>
-            <Reveal as={Link} to="/service#implant" delay={3} className="tile">
-              <img src={svcImplant} alt="Dental implant" />
-              <div>
-                <h3>Dental Implants</h3>
-                <p>Single tooth to full-arch options including All‑on‑4 concepts.</p>
-                <span className="tile-cta">Explore</span>
-              </div>
+            <Reveal delay={3} as="figure" className="figure-card">
+              <img src={imgTreatment} alt="Treatment Room" />
+              <figcaption>Treatment Room</figcaption>
+            </Reveal>
+            <Reveal delay={1} as="figure" className="figure-card">
+              <img src={imgXray} alt="Digital X-ray" />
+              <figcaption>Digital X-ray</figcaption>
+            </Reveal>
+            <Reveal delay={2} as="figure" className="figure-card">
+              <img src={imgCT} alt="3D CT Imaging" />
+              <figcaption>3D CT Imaging</figcaption>
+            </Reveal>
+            <Reveal delay={3} as="figure" className="figure-card">
+              <img src={imgLab} alt="Prosthetics Lab" />
+              <figcaption>Prosthetics Lab</figcaption>
             </Reveal>
           </div>
         </div>
