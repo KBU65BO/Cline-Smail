@@ -89,7 +89,7 @@ ul.bullets{padding-left:1.2rem}
 /* Banner frame between hero and content */
 .hero-banner{padding:18px 0}
 .hero-banner-inner{display:flex;justify-content:center}
-.hero-banner-inner img{width:100%;max-width:1400px;height:360px;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:0 26px 60px rgba(2,132,199,.10);background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.2))}
+.hero-banner-inner img{width:100%;max-width:1600px;height:480px;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:0 26px 60px rgba(2,132,199,.10);background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.2))}
 
 
 .page-hero.small{padding:28px 0 12px;border-bottom:1px solid var(--line);background:linear-gradient(0deg,#fff,#f7fbff)}
@@ -193,5 +193,5 @@ th{background:#f1f5f9;font-weight:600}
 }
 
 @media (min-width: 1200px){
-  .hero-banner-inner img{height:420px}
+  .hero-banner-inner img{height:520px}
 }
