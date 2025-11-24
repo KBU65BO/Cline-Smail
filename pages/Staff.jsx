@@ -63,7 +63,8 @@ const clinicians = {
     bullets: [
       'DDS (Hons), Srinakharinwirot University',
       'M.Sc. Endodontics, Srinakharinwirot University'
-    ]
+    ],
+    orgSize: 'md'
   },
   boy: {
     id: 'boy',
@@ -138,7 +139,8 @@ const clinicians = {
     bullets: [
       'DDS, Khon Kaen University',
       'M.Sc. Orthodontics, Khon Kaen University'
-    ]
+    ],
+    orgSize: 'md'
   }
 }
 
@@ -234,7 +236,7 @@ export default function Staff(){
                           key={doc.id}
                           person={doc}
                           subtitle={doc.role}
-                          size="sm"
+                          size={doc.orgSize || 'sm'}
                           onOpen={openLightbox}
                         />
                       ))}

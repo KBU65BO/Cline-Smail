@@ -14,6 +14,7 @@ import imgCT from '../assets/img/ct.png'
 import imgLab from '../assets/img/lab.png'
 import imgMap from '../assets/img/map.png'
 import sCherry from '../assets/img/staff-cherry.png'
+import sCherryAlt from '../assets/img/staff-arisza2.png'
 import sTob from '../assets/img/staff-tob.png'
 import sAe from '../assets/img/staff-ae.png'
 import sNung from '../assets/img/staff-nung.png'
@@ -22,7 +23,7 @@ import sGui from '../assets/img/staff-gui.png'
 
 const featuredDentists = [
   {
-    img: sCherry,
+    img: sCherryAlt,
     name: 'Dr. Patcharin Nanthaekaphong (Dr. Cherry)',
     role: 'Prosthodontist & Implant Dentist',
     bullets: [
