@@ -104,6 +104,26 @@ th{background:#f1f5f9;font-weight:600}
 .staff-grid .profile-media img{width:100%;height:100%;object-fit:contain}
 .staff-grid .profile-media:hover{transform:translateY(-4px)}
 
+.team-highlight{padding:26px 0}
+.staff-highlight{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch;margin-top:18px}
+.profile-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.profile-card figure{margin:0}
+.profile-card figure img{width:100%;height:320px;object-fit:cover;border-radius:20px;border:1px solid var(--line)}
+.profile-card h3{margin-top:6px}
+.profile-card ul{margin-top:6px}
+.team-highlight__cta{margin-top:18px;display:flex;justify-content:flex-end}
+.team-highlight__cta .btn{box-shadow:none}
+
+@media (max-width:900px){
+  .staff-highlight{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .profile-card figure img{height:260px}
+  .team-highlight__cta{justify-content:center}
+}
+
+@media (max-width:640px){
+  .staff-highlight{grid-template-columns:1fr}
+}
+
 .contact-layout{display:grid;grid-template-columns:2fr 1fr;gap:18px}
 .form .form-row{display:flex;flex-direction:column;gap:6px;margin:10px 0}
 .form .form-row.two{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}

@@ -12,6 +12,70 @@ import imgTreatment from '../assets/img/treatment.png'
 import imgXray from '../assets/img/xray.png'
 import imgCT from '../assets/img/ct.png'
 import imgLab from '../assets/img/lab.png'
+import sCherry from '../assets/img/staff-cherry.png'
+import sTob from '../assets/img/staff-tob.png'
+import sAe from '../assets/img/staff-ae.png'
+import sNung from '../assets/img/staff-nung.png'
+import sBoy from '../assets/img/staff-boy.png'
+import sGui from '../assets/img/staff-gui.png'
+
+const featuredDentists = [
+  {
+    img: sCherry,
+    name: 'Dr. Patcharin Nanthaekaphong (Dr. Cherry)',
+    role: 'Prosthodontist & Implant Dentist',
+    bullets: [
+      'DDS (Hons), Mahidol University',
+      'M.Sc. Prosthodontics, Mahidol University',
+      'Certificates in Surgical & Prosthetic Implant Dentistry'
+    ]
+  },
+  {
+    img: sTob,
+    name: 'Dr. Pabhinvitch Vipatbovonwong (Dr. Tob)',
+    role: 'Orthodontist',
+    bullets: [
+      'DDS, Khon Kaen University',
+      'M.Sc. Orthodontics, Khon Kaen University'
+    ]
+  },
+  {
+    img: sAe,
+    name: 'Dr. Assawinee Thimsang (Dr. Ae)',
+    role: 'Periodontist',
+    bullets: [
+      'DDS (Hons), Mahidol University',
+      'M.Sc. Periodontics, Mahidol University'
+    ]
+  },
+  {
+    img: sNung,
+    name: 'Dr. Surpun Srikume (Dr. Nung)',
+    role: 'Endodontist',
+    bullets: [
+      'DDS (Hons), Srinakharinwirot University',
+      'M.Sc. Endodontics, Srinakharinwirot University'
+    ]
+  },
+  {
+    img: sBoy,
+    name: 'Dr. Woradet Phichaiutkrit (Dr. Boy)',
+    role: 'Advanced General Dentistry',
+    bullets: [
+      'DDS, Mahidol University',
+      'M.Sc. General Dentistry, Khon Kaen University'
+    ]
+  },
+  {
+    img: sGui,
+    name: 'Dr. Chaichan Sangsirinakagul (Dr. Gui)',
+    role: 'Advanced General Dentistry',
+    bullets: [
+      'DDS, Khon Kaen University',
+      'M.Sc. General Dentistry, Khon Kaen University'
+    ]
+  }
+]
 
 export default function Home(){
   const { openLightbox } = useLightbox()
@@ -138,6 +202,37 @@ export default function Home(){
               <img src={imgLab} alt="Prosthetics Lab" onClick={() => openLightbox(imgLab, 'Prosthetics Lab')} />
               <figcaption>Prosthetics Lab</figcaption>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="team-highlight">
+        <div className="container">
+          <Reveal><h2>Our Dentist Team</h2></Reveal>
+          <Reveal delay={1}><p>English-speaking specialists across every branch of dentistry, ready to take care of your smile.</p></Reveal>
+          <div className="staff-highlight">
+            {featuredDentists.map((doc, i) => (
+              <Reveal key={doc.name} delay={(i % 3) + 1} className="profile-card">
+                <figure>
+                  <img
+                    src={doc.img}
+                    alt={doc.name}
+                    onClick={() => openLightbox(doc.img, doc.name)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </figure>
+                <h3>{doc.name}</h3>
+                <p className="muted">{doc.role}</p>
+                <ul className="bullets">
+                  {doc.bullets.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </Reveal>
+            ))}
+          </div>
+          <div className="team-highlight__cta">
+            <Link to="/staff" className="btn">Meet the full team</Link>
           </div>
         </div>
       </section>
