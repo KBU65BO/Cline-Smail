@@ -12,6 +12,7 @@ import imgTreatment from '../assets/img/treatment.png'
 import imgXray from '../assets/img/xray.png'
 import imgCT from '../assets/img/ct.png'
 import imgLab from '../assets/img/lab.png'
+import imgMap from '../assets/img/map.png'
 import sCherry from '../assets/img/staff-cherry.png'
 import sTob from '../assets/img/staff-tob.png'
 import sAe from '../assets/img/staff-ae.png'
@@ -233,6 +234,37 @@ export default function Home(){
           </div>
           <div className="team-highlight__cta">
             <Link to="/staff" className="btn">Meet the full team</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-map">
+        <div className="container">
+          <Reveal><h2>Map &amp; Directions</h2></Reveal>
+          <Reveal delay={1}><p>Find us easily—near Walking Street (≈700 m) and TukCom (≈300 m).</p></Reveal>
+          <Reveal className="map-wrap card" delay={1}>
+            <iframe title="Dental Smile Pattaya Map" width="100%" height="360" loading="lazy" style={{border:0}}
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=12.9220523,100.882001&z=16&output=embed"></iframe>
+          </Reveal>
+          <div className="grid two landmarks">
+            <Reveal delay={1} className="card">
+              <h3>Coordinates</h3>
+              <p><strong>Lat/Lng:</strong> 12.9220523, 100.882001</p>
+              <img src={imgMap} alt="Street view near clinic" onClick={() => openLightbox(imgMap, 'Clinic location street view')} style={{cursor:'pointer'}} />
+            </Reveal>
+            <Reveal delay={2} className="card">
+              <h3>Nearby landmarks</h3>
+              <ul className="bullets">
+                <li>TukCom (IT &amp; Mobile mall) ~300 m</li>
+                <li>Walking Street Pattaya ~700 m</li>
+                <li>Pattaya Beach ~700 m</li>
+                <li>Royal Garden Plaza ~750 m</li>
+                <li>Central Festival Pattaya Beach ~2 km</li>
+                <li>Sukhumvit Road ~2 km</li>
+                <li>Suvarnabhumi Bangkok Airport ~120 km</li>
+              </ul>
+            </Reveal>
           </div>
         </div>
       </section>
