@@ -2,6 +2,8 @@ import Reveal from '../components/Reveal.jsx'
 import imgContact from '../assets/img/contact-illustration.png'
 import { useLightbox } from '../components/LightboxProvider.jsx'
 
+
+
 export default function Contact(){
   const { openLightbox } = useLightbox()
   const submit = (e) => {
